@@ -1,6 +1,6 @@
     // src/pages/Shop.jsx
     import React, { useState } from "react";
-    import products from "../data/products";
+    import products from "../Data/products.js";
     import CategoryFilter from "../components/CategoryFilter";
     import ProductGrid from "../Components/ProductGrid";
 
