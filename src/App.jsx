@@ -6,8 +6,8 @@ import CartDrawer from "./Components/CartDrawer";
 import Footer from "./Components/Footer";
 
 import Home from "./Components/Home"
-import Shop from "./Components/Shop";
-import Product from "./Components/Product";
+import Shop from "./Components/Shop"
+import Product from "./Components/Product"
 import Cart from "./Components/Cart";
 import About from "./Components/About";
 import Contact from "./Components/Contact";
