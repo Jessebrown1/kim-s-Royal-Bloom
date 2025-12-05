@@ -1,9 +1,9 @@
 // src/App.jsx
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import CartDrawer from "./components/CartDrawer";
-import Footer from "./components/Footer";
+import Navbar from "./Components/Navbar";
+import CartDrawer from "./Components/CartDrawer";
+import Footer from "./Components/Footer";
 
 import Home from "./Components/Home";
 import Shop from "./Components/Shop";
