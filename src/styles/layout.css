@@ -1,0 +1,124 @@
+.shop-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  
+  .search-wrap {
+    padding: 6px 10px;
+  }
+  
+  .search-wrap input {
+    width: 100%;
+    border-radius: 999px;
+    border: none;
+    padding: 0.5rem 0.9rem;
+    background: rgba(0, 0, 0, 0.45);
+    color: var(--text-main);
+    outline: none;
+  }
+  
+  /* Product detail */
+  .product-detail-inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    gap: 24px;
+    padding: 24px;
+  }
+  
+  .product-detail-image img {
+    border-radius: 16px;
+    max-height: 420px;
+    object-fit: cover;
+    width: 100%;
+  }
+  
+  .product-detail-info h1 {
+    margin: 4px 0 8px;
+  }
+  
+  .product-detail-price {
+    color: var(--accent-gold);
+    font-size: 1.2rem;
+    margin: 0 0 12px;
+  }
+  
+  .product-detail-desc {
+    color: var(--text-muted);
+    margin-bottom: 20px;
+  }
+  
+  /* Cart page layout */
+  .cart-page .cart-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+    gap: 20px;
+  }
+  
+  .cart-list {
+    padding: 18px;
+  }
+  
+  .cart-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  
+  .cart-row-main h3 {
+    margin: 0 0 4px;
+  }
+  
+  .cart-row-side {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .cart-row-total {
+    color: var(--accent-gold);
+  }
+  
+  .cart-summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  /* Contact/checkout */
+  .contact-form,
+  .checkout-form {
+    padding: 18px;
+  }
+  
+  /* Footer responsiveness & hero */
+  @media (max-width: 768px) {
+    .navbar-inner {
+      gap: 10px;
+    }
+  
+    .nav-links {
+      display: none; /* for simplicity; you can add a mobile menu if you like */
+    }
+  
+    .hero-content {
+      padding: 28px 20px 32px;
+    }
+  
+    .product-detail-inner {
+      grid-template-columns: 1fr;
+    }
+  
+    .cart-page .cart-layout {
+      grid-template-columns: 1fr;
+    }
+  
+    .cart-drawer {
+      width: 100%;
+    }
+  }
+  
