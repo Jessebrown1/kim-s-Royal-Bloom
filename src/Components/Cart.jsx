@@ -1,7 +1,7 @@
     // src/pages/Cart.jsx
     import React from "react";
     import { useCart } from "../context/CartContext";
-    import CheckoutForm from "../components/CheckoutForm";
+    import CheckoutForm from "../Components/CheckoutForm";
 
     const Cart = () => {
     const { cart, subtotal, updateQuantity, removeFromCart } = useCart();

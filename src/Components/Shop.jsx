@@ -2,7 +2,7 @@
     import React, { useState } from "react";
     import products from "../data/products";
     import CategoryFilter from "../components/CategoryFilter";
-    import ProductGrid from "../components/ProductGrid";
+    import ProductGrid from "../Components/ProductGrid";
 
     const Shop = () => {
     const [category, setCategory] = useState("all");
