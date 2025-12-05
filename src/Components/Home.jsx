@@ -1,7 +1,7 @@
 // src/pages/Home.jsx
 import React from "react";
 import Hero from "../Components/Hero";
-import products from "../data/products";
+import products from "../data/products.js";
 import ProductGrid from "../Components/ProductGrid";
 
 const Home = () => {
