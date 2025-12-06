@@ -4,8 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from "./Components/Navbar";
 import CartDrawer from "./Components/CartDrawer";
 import Footer from "./Components/Footer";
-
-import Home from "./Components/Home"
+import Home from "../src/Components/Home"
 import Shop from "./Components/Shop"
 import Product from "./Components/Product"
 import Cart from "./Components/Cart";
