@@ -1,7 +1,7 @@
     // src/pages/Product.jsx
     import React from "react";
     import { useParams } from "react-router-dom";
-    import products from "../data/products.js";
+    import products from "../Components/products"
     import { useCart } from "../context/CartContext";
 
     const categoryLabels = {
