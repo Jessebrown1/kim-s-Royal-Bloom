@@ -9,12 +9,31 @@
 }
 
 
+/* hide desktop menu on small screens */
+.desktop-only {
+  display: flex;
+}
+
+.mobile-only {
+  display: none;
+}
+
+
+
 .navbar-inner {
   max-width: 1120px;
   margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 20px;
+  justify-content: flex-start;  /* brand first, others follow */
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: auto; /* pushes actions to the right */
 }
 
 .glass-nav {
@@ -39,11 +58,100 @@
   color: var(--text-muted);
 }
 
+/* desktop nav links */
 .nav-links {
   display: flex;
   gap: 18px;
   align-items: center;
+  margin-left: auto;            /* pushes nav-actions to the far right */
 }
+
+
+
+
+/* --- NAV VISIBILITY (DESKTOP vs MOBILE) --- */
+.desktop-only {
+  display: flex;
+}
+
+.mobile-only {
+  display: none;
+}
+
+/* hamburger + cart spacing on mobile */
+
+
+/* --- FULL-SCREEN MOBILE MENU --- */
+
+/* stop background scroll when open */
+body.menu-open {
+  overflow: hidden;
+}
+
+/* full-screen overlay */
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(circle at top, rgba(212, 175, 55, 0.24), transparent 55%),
+    rgba(6, 9, 18, 0.86);
+  backdrop-filter: blur(14px);
+  animation: mobileMenuIn 0.40s ease-out;
+}
+
+
+/* menu links */
+.mobile-menu a {
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  text-decoration: none;
+  padding: 10px 0;
+  color: var(--accent-gold);
+  position: relative;
+  text-align: center;
+}
+
+/* premium underline */
+.mobile-menu a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -4px;
+  width: 0;
+  height: 1px;
+  background: linear-gradient(90deg, var(--accent-gold), var(--accent-blue));
+  transform: translateX(-50%);
+  transition: width var(--transition-fast);
+}
+
+.mobile-menu a:hover::after,
+.mobile-menu a.active::after {
+  width: 60%;
+}
+
+.mobile-menu a.active {
+  color: var(--accent-blue);
+}
+
+/* fade-in animation */
+@keyframes mobileMenuIn {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+
 
 .nav-links a {
   font-size: 0.9rem;
@@ -480,4 +588,91 @@
 .page-copy p {
   margin-top: 0;
   margin-bottom: 12px;
+}
+
+
+
+/* breakpoint – mobile nav */
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: inline-flex;
+    font-size: 1.4rem;
+    padding: 8px;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    color: var(--text-main);
+  }
+
+  .nav-actions {
+    gap: 8px;          /* slightly tighter on mobile */
+  }
+
+
+
+/* inner container for links */
+.mobile-menu-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 90px;
+
+}
+
+
+
+  .mobile-menu a {
+    font-size: 1.05rem;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    text-decoration: none;
+    padding: 10px 0;
+    color: var(--accent-gold);
+    position: relative;
+  }
+
+  .mobile-menu a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -4px;
+    width: 0;
+    height: 1px;
+    background: linear-gradient(90deg, var(--accent-gold), var(--accent-blue));
+    transform: translateX(-50%);
+    transition: width var(--transition-fast);
+  }
+
+  .mobile-menu a:hover::after,
+  .mobile-menu a.active::after {
+    width: 60%;
+  }
+
+  .mobile-menu a.active {
+    color: var(--accent-blue);
+  }
+}
+
+
+
+/* overall overlay fade-in */
+@keyframes mobileMenuIn {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+  /* FULL-SCREEN PREMIUM OVERLAY MENU */
+ /* FULL-SCREEN PREMIUM MOBILE MENU */
+ body.menu-open {
+  overflow: hidden;
 }
