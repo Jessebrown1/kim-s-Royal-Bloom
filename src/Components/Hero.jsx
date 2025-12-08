@@ -1,7 +1,7 @@
 // src/components/Hero.jsx
 import React from "react";
 import { Link } from "react-router-dom";
-import kim1 from "../assets/kim1.mp4";
+import kim1 from "../assets/kim1.MP4"
 
 const Hero = () => {
   return (
