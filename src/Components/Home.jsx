@@ -5,7 +5,7 @@ import products from "../Components/products"
 import ProductGrid from "../Components/ProductGrid";
 
 const Home = () => {
-  const featured = products.slice(0, 4);
+  const featured = products.slice(0, 8);
 
   return (
     <>

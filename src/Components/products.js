@@ -1,11 +1,20 @@
     // src/data/products.js
+    import let1 from "../assets/let1.jpg";
+    import let2 from "../assets/let2.jpg";
+    import let3 from "../assets/let3.jpg";
+    import let4 from "../assets/let4.jpg";
+    import let5 from "../assets/let5.jpg";
+    import let6 from "../assets/let6.jpg";
+    import let7 from "../assets/let7.jpg";
+    import let8 from "../assets/let8.png";
+
     const products = [
         {
         id: 1,
         name: "Crystal Waist Beads",
-        category: "waist-beads",
+        category: "bracelets",
         price: 120,
-        image: "/images/waist1.jpg",
+        image: let1,
         description: "Premium handmade crystal waist beads with a subtle glow."
         },
         {
@@ -13,7 +22,7 @@
         name: "Sapphire Charm Bracelet",
         category: "bracelets",
         price: 180,
-        image: "/images/bracelet1.jpg",
+        image: let2,
         description: "Delicate bracelet with sapphire-blue accents and gold hardware."
         },
         {
@@ -21,7 +30,7 @@
         name: "Golden Anklet Strings",
         category: "anklets",
         price: 95,
-        image: "/images/anklet1.jpg",
+        image: let3,
         description: "Minimal anklet set with layered golden tones."
         },
         {
@@ -29,7 +38,7 @@
         name: "Aurora Pendant Necklace",
         category: "necklaces",
         price: 250,
-        image: "/images/necklace1.jpg",
+        image: let4,
         description: "Statement necklace with shimmering crystals and gold details."
         },
         {
@@ -37,7 +46,7 @@
         name: "Moonlit Waist Beads",
         category: "waist-beads",
         price: 130,
-        image: "/images/waist2.jpg",
+        image: let5,
         description: "Handmade waist beads inspired by moonlight reflections."
         },
         {
@@ -45,9 +54,25 @@
         name: "Elysian Gold Bracelet",
         category: "bracelets",
         price: 210,
-        image: "/images/bracelet2.jpg",
+        image: let6,
         description: "Fine gold bracelet with a soft, luxurious sheen."
-        }
+        },
+        {
+            id: 7,
+            name: "Aurora Pendant Necklace",
+            category: "necklaces",
+            price: 250,
+            image: let7,
+            description: "Statement necklace with shimmering crystals and gold details."
+            },
+            {
+                id: 8,
+                name: "Sapphire Charm Bracelet",
+                category: "bracelets",
+                price: 180,
+                image: let8,
+                description: "Delicate bracelet with sapphire-blue accents and gold hardware."
+                },
     ];
     
     export default products;
