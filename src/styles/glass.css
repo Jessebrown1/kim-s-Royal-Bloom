@@ -390,7 +390,7 @@ body.menu-open {
 .category-filter {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 9px;
 }
 
 .category-pill {
@@ -411,7 +411,7 @@ body.menu-open {
   background: linear-gradient(135deg, var(--accent-gold), var(--accent-blue));
   color: #0b0f19;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
-  transform: translateY(-1px);
+  transform: translateY(-5px);
 }
 
 /* Cart drawer */
